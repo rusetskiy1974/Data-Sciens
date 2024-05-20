@@ -1,0 +1,274 @@
+import numpy as np
+
+
+# 1 Створіть одновимірний масив (вектор) з першими 10-ма натуральними числами та виведіть його значення.
+
+
+a=np.arange(1,11)
+
+
+print(a)
+
+
+
+
+
+# 2 Створіть двовимірний масив (матрицю) розміром 3x3, заповніть його нулями та виведіть його значення.
+
+
+a = np.zeros((3, 3), dtype=int)
+
+
+print(a)
+
+
+# 3 Створіть масив розміром 5x5, заповніть його випадковими цілими числами в діапазоні від 1 до 10 та виведіть його значення.
+
+
+a = np.random.randint(1, 11, size=(5, 5))
+
+
+print(a)
+
+
+
+
+
+# 4 Створіть масив розміром 4x4, заповніть його випадковими дійсними числами в діапазоні від 0 до 1 та виведіть його значення.
+
+
+a = np.random.random((4, 4))
+
+
+print(a)
+
+
+
+
+
+# 5 Створіть два одновимірних масиви розміром 5, заповніть їх випадковими цілими числами в діапазоні від 1 до 10 та виконайте на них поелементні операції додавання, віднімання та множення.
+
+
+a = np.random.randint(1, 11, size=5)
+b = np.random.randint(1, 11, size=5)
+
+
+print(a)
+print(b)
+
+
+sum_result = a + b
+diff_result = a - b
+multiple_result = a * b
+
+
+print('sum:', sum_result)
+print('diff:', diff_result)
+print('multiple:', multiple_result)
+
+
+# 6 Створіть два вектори розміром 7, заповніть довільними числами та знайдіть їх скалярний добуток.
+
+
+vector1 = np.array([1.2, 3.4, 5.6, 7.8, 9.0, 2.1, 4.3])
+vector2 = np.array([6.7, 5.4, 3.2, 1.0, 8.9, 7.6, 2.3])
+
+
+print(vector1)
+print(vector2)
+
+
+dot_product = np.dot(vector1, vector2)
+
+
+print(dot_product)
+
+
+# 7 Створіть дві матриці розміром 2x2 та 2x3, заповніть їх випадковими цілими числами в діапазоні від 1 до 10 та перемножте їх між собою.
+
+
+a = np.random.randint(1, 11, size=(2, 2))
+b = np.random.randint(1, 11, size=(2, 3))
+
+
+print(a)
+print(b)
+
+
+multiple = np.dot(a, b)
+
+
+print(multiple)
+
+
+
+
+
+# 8 Створіть матрицю розміром 3x3, заповніть її випадковими цілими числами в діапазоні від 1 до 10 та знайдіть її обернену матрицю.
+
+
+a = np.random.randint(1, 11, size = (3, 3))
+
+
+print(a)
+
+
+a_inv = np.linalg.inv(a)
+print("\n Обернена матриця")
+print(a_inv)
+
+
+# 9 Створіть матрицю розміром 4x4, заповніть її випадковими дійсними числами в діапазоні від 0 до 1 та транспонуйте її.
+
+
+matrix = np.random.random((4,4))
+
+
+print(matrix)
+
+
+matrix_T = matrix.T
+
+
+print('Транспонована матриця')
+print(matrix_T)
+
+
+# 10 Створіть матрицю розміром 3x4 та вектор розміром 4, заповніть їх випадковими цілими числами в діапазоні від 1 до 10 та перемножте матрицю на вектор.
+
+
+matrix = np.random.randint(1, 11, size = (3, 4))
+vector = np.random.randint(1, 11, size = 4)
+
+
+result = np.dot(matrix, vector)
+
+
+print(result)
+
+
+# 11 Створіть матрицю розміром 2x3 та вектор розміром 3, заповніть їх випадковими дійсними числами в діапазоні від 0 до 1 та перемножте матрицю на вектор.
+
+
+matrix = np.random.rand(2,3)
+vector = np.random.rand(3)
+
+
+print(matrix, '\n')
+print(vector)
+
+
+result = np.dot(matrix, vector)
+
+
+print(result)
+
+
+# 12 Створіть дві матриці розміром 2x2, заповніть їх випадковими цілими числами в діапазоні від 1 до 10 та виконайте їхнє поелементне множення.
+
+
+matrix1 = np.random.randint(1, 11, size = (2,2))
+matrix2 = np.random.randint(1, 11, size = (2,2))
+
+
+print(matrix1, '\n')
+print(matrix2)
+
+
+result = (matrix1 * matrix2)
+
+
+print('--------result---------\n\n', result)
+
+
+# 13 Створіть дві матриці розміром 2x2, заповніть їх випадковими цілими числами в діапазоні від 1 до 10 та знайдіть їх добуток.
+
+
+matrix1 = np.random.randint(1, 11, size = (2, 2))
+matrix2 = np.random.randint(1, 11, size = (2, 2))
+
+
+print(matrix1, '\n')
+print(matrix2)
+
+
+product_matrix = np.dot(matrix1, matrix2)
+
+
+print('-----result-----\n\n', product_matrix)
+
+
+# 14 Створіть матрицю розміром 5x5, заповніть її випадковими цілими числами в діапазоні від 1 до 100 та знайдіть суму елементів матриці.
+
+
+matrix = np.random.randint(1, 101, size = (5, 5))
+
+
+print(matrix)
+
+
+result = matrix.sum()
+
+
+print('sum=', result)
+
+
+# 15 Створіть дві матриці розміром 4x4, заповніть їх випадковими цілими числами в діапазоні від 1 до 10 та знайдіть їхню різницю.
+
+
+matrix1 = np.random.randint(1, 11, size = (4, 4))
+matrix2 = np.random.randint(1, 11, size = (4 ,4))
+
+
+print(matrix1, '\n\n')
+print(matrix2)
+
+
+diff_matrix = matrix1 - matrix2
+
+
+print('----difference matrix----\n')
+print(diff_matrix)
+
+
+# 16 Створіть матрицю розміром 3x3, заповніть її випадковими дійсними числами в діапазоні від 0 до 1 та знайдіть вектор-стовпчик, що містить суму елементів кожного рядка матриці.
+
+
+matrix = np.random.random((3,3))
+
+
+print(matrix)
+
+
+vector_sum = np.sum(matrix, axis=1).reshape(3, 1)
+
+
+print('-----result-----\n')
+print(vector_sum)
+
+
+# 17 Створіть матрицю розміром 3x4 з довільними цілими числами і створінь матрицю з квадратами цих чисел.
+
+
+matrix = np.random.randint(1, 11, size=(3, 4))
+
+
+result = np.square(matrix)
+
+
+print('----result------\n', result)
+
+
+# 18 Створіть вектор розміром 4, заповніть його випадковими цілими числами в діапазоні від 1 до 50 та знайдіть вектор з квадратними коренями цих чисел.
+
+
+vector = np.random.randint(1, 51, size = 4)
+
+
+print(vector)
+
+
+result = np.sqrt(vector)
+
+
+print('------result--------\n', result)
